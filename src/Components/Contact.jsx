@@ -10,7 +10,7 @@ return(
 <>
 <h2 className="contacttittle" id="contact">Contact</h2>
 <section className="contacticons">
-          <a href="https://www.linkedin.com/in/dakiti-dunno-2354a0377/?skipRedirect=true"> 
+          <a href="https://www.linkedin.com/in/juan-casallas-2354a0377/"> 
           <img src={linkedin} alt="" />
           </a>
 
