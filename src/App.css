@@ -75,9 +75,9 @@ height: 400px;
 
 .profileImage h1{
 font-size: 50px;
-animation: opacidad 3s steps(20) forwards;
+animation: opacidad 3s alternate infinite;
 text-align: center;
-margin: 0 0 -33px 0;
+margin: 0 0 -25px 0;
 }
 
 .profileImage h2{
@@ -90,6 +90,8 @@ font-family: monospace;
     
   width: 0;
 }
+ 
+
 .profileImage h3{
   text-align: center;
 font-size: 30px;
@@ -97,7 +99,7 @@ animation: escribir 2.5s steps(20) forwards;
 font-family: monospace;  
   white-space: nowrap;     
   overflow: hidden;        
-  margin-top: -20px;
+  margin-top: -18px;
     
   width: 0;
 }
@@ -135,26 +137,24 @@ font-family: monospace;
 .twoBarsOra{
   display: flex;
   justify-content: space-around;
- 
-
 }
  
 
 .outBarHTML{
-  width: 50%;
-  height: 10px;
+width:50%;
+height: 10px;
 border: 1px solid white;
 border-radius: 5px;
 overflow: hidden;
 }
 
 .innerBarHTML{
-  width: 99%;
+ 
 border: 1px solid white;
 height: 10px;
 background-color: aliceblue;
 border-radius: 1px;
-animation: load99 5s forwards ;
+animation: load99 6s forwards ;
 }
 
 .stitles{
@@ -162,7 +162,7 @@ animation: load99 5s forwards ;
   justify-content: space-between;
 }
 
-.stitles>h3{
+.stitles >h3{
   margin-right: 50%;
 }
 
@@ -171,47 +171,44 @@ animation: load99 5s forwards ;
  
 }
 
-
-
 .outBarCSS{
-  width: 50%;
-  height: 10px;
+width: 50%;
+height: 10px;
 border: 1px solid white;
 border-radius: 4px;
 overflow: hidden;
 }
 
 .innerBarCSS{
-  width: 99%;
+ 
 border: 1px solid white;
 height: 10px;
 background-color: aliceblue;
 border-radius: 1px;
-animation: load99 5s forwards ;
+animation: load99 6s forwards ;
 }
 
 .JavaScript{
 width: 50%;
- 
- margin: 2% 0 0 20%;
+margin: 2% 0 0 20%;
  
 }
 
 .outBarJS{
-  width: 50%;
-  height: 10px;
+width: 50%;
+height: 10px;
 border: 1px solid white;
 border-radius: 4px;
 overflow: hidden;
 }
 
 .innerBarJS{
-  width: 90%;
+  
 border: 1px solid white;
 height: 10px;
 background-color: aliceblue;
 border-radius: 1px;
-animation: load90 5s forwards ;
+animation: load90 7s forwards ;
 }
 
 .React{
@@ -234,12 +231,12 @@ border: 1px solid white;
 height: 10px;
 background-color: aliceblue;
 border-radius: 1px;
-animation: load80 6s forwards ;
+animation: load80 7s forwards ;
 }
 
 .ts{
   width: 50%;
-  margin: 2% 0 0 25%
+  margin: 1% 0 1% 25%
 }
 
 
@@ -257,7 +254,71 @@ border: 1px solid white;
 height: 10px;
 background-color: aliceblue;
 border-radius: 1px;
-animation: load60 6.5s forwards ;
+animation: load60 8s forwards ;
+}
+
+.outBarES{
+  width:50%;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.innerBarES{
+ 
+border: 1px solid white;
+height: 10px;
+background-color: aliceblue;
+border-radius: 1px;
+animation: load100 9s forwards ;
+}
+
+.spanish{
+  width:50%; 
+ margin-left: 20%;
+  
+}
+.outBarEN{
+  width: 50%;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.innerBarEN{
+ 
+border: 1px solid white;
+height: 10px;
+background-color: aliceblue;
+border-radius: 1px;
+animation: load85 9s forwards ;
+ 
+}
+
+.english{
+  width:50%; 
+}
+
+@keyframes load100 {
+  0%{
+    width: 0;
+  }
+
+  100%{
+width: 100%;
+  }
+}
+
+@keyframes load85 {
+  0%{
+    width: 0;
+  }
+
+  100%{
+width: 85%;
+  }
 }
 
 @keyframes load99 {
@@ -363,6 +424,11 @@ width: 60%;
   animation: floatX 3s ease-in-out infinite; 
 }
 
+.footerAnchor{
+  color: white;
+  text-decoration: none;
+}
+
 @keyframes floatX {
           0%, 90%, 100% { transform: translateX(0); }
           92% { transform: translateX(-2px); }
@@ -445,18 +511,39 @@ footer{
   flex-direction: column;
   padding-top: 30px;
   align-items: center;
-  background-color: #111111;
+  background: linear-gradient(#000000d2,#11111167);
 }
 
  
  @media (max-width: 768px) {
  
+
   
+  nav > a{
+    
+    font-size: 14px;
+  }
+
+  header nav{
+  margin-right: 0px;
+}
+  
+  canvas{
+  width: 100dvw;
+  height: 100dvh;
+ 
+}
   header {
     flex-direction: column;  
     height: auto; 
     padding: 10px;
   }
+
+  .skillbars{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
   .pokeimg1{
     border-bottom: 2px solid white;
@@ -466,14 +553,73 @@ footer{
     font-size: 40px;  
   }
 
-  .twoBarsOra, .pokedex, .aboutMe {
+  .pokedex, .aboutMe {
+    display: flex;
     flex-direction: column;  
     align-items: center;
     margin: 40px 0;
   }
 
-  .textZone, .imageZone, .htmls, .ts, .JavaScript {
+   .twoBarsOra {
+    display: flex;
+    margin: 40px 20px;
+   }
+
+   .ts{
+    padding-left: 20%;
+   }
+
+   .stitles >h3{
+  margin-right: 10%;
+}
+
+  .textZone, .imageZone, .htmls, .ts, .JavaScript, 
+.spanish{
     width: 90%;  
     margin-left: 0;  
   }
+
+  .outBarHTML{
+  width:35dvw;
+ 
+}
+ 
+.outBarCSS{
+width: 35dvw;  
+}
+ 
+.outBarJS{
+  width: 35dvw;
+ 
+}
+  
+.outBarJSX{
+  width: 35dvw;
+  
+}
+ 
+.outBarTS{
+  width: 50dvw;
+  
+}
+
+.outBarES{
+  width: 35dvw;
+ 
+}
+ 
+.outBarEN{
+  width:  35dvw;
+ 
+}
+ 
+ 
+}
+
+
+
+
+@media (min-height: 677px) {
+
+
 }

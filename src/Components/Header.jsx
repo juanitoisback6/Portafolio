@@ -9,7 +9,8 @@ export default function Header (){
           <>
           <header>
                    <div>
-                    <img src={Icon} draggable="false"  alt="Icon of the page" />
+                    <a className="footerAnchor" href="https://github.com/juanitoisback6" rel="noopener noreferrer" target="_blank"> 
+                    <img src={Icon} draggable="false"  alt="Icon of the page" /> </a>
                     </div> 
                     <nav>
                     <a href="#skillsn">Skills</a>
