@@ -60,28 +60,18 @@ const ParticulasCanvas = () => {
         this.y += this.dy;
 
        
-        if (
-          mouse.x !== undefined && mouse.y !== undefined &&
-          mouse.x - this.x < 50 && mouse.x - this.x > -50 && 
-          mouse.y - this.y < 50 && mouse.y - this.y > -50
-        ) {
-          if (this.size < 5) {
-            this.size += 0.2;
-          }
-          if (mouse.x < this.x) {
-            this.x -= 3;
-          } else {
-            this.x += 3;
-          }
+       if (mouse.x - this.x < 50 && mouse.x - this.x > - 50 && mouse.y - this.y < 50 && mouse.y - this.y > - 50){
 
-          if (mouse.y < this.y) {
-            this.y += 3; 
-          } else {
-            this.y -= 3;
-          }
-        } else if (this.size > this.minSize) {
-          this.size -= 0.1;
-        }
+    if (this.size < 5){
+        this.size += 0.2;
+         
+    }
+
+} else if (this.size > this.minSize){
+this.size -= 0.1;
+ 
+}
+
 
         this.draw();
       }
@@ -91,12 +81,12 @@ const ParticulasCanvas = () => {
 
     const init = () => {
       arrayCuadrados = [];
-      for (let i = 0; i < 5000; i++) {
-        let size = 1; 
+      for (let i = 0; i < 3000; i++) {
+        let size = 0.5; 
         let x = Math.random() * (canvas.width - size * 2) + size;
         let y = Math.random() * (canvas.height - size * 2) + size;
-        let dx = Math.random() * 0.8;
-        let dy = Math.random() * 0.8;
+        let dx = Math.random() * 1;
+        let dy = Math.random() * 1.8;
         let color = 'white';  
         arrayCuadrados.push(new Cuadrado(x, y, dx, dy, color));
       }
